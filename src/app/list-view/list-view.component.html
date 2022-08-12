@@ -1,0 +1,29 @@
+<div class="centered-content">
+    <div class="shopping-manager-container">
+        <div class="sidebar has-background-light">
+            <h1 class="title has-text-primary">
+                Lists
+            </h1>
+
+            <div class="shopping-menu">
+                <a class="shopping-menu-list is-active">Apples</a>
+                <a class="shopping-menu-list" *ngFor="let list of lists" [routerLink]="['/list', list._id]" routerLinkActive="is-active">
+                    <p>{{list.title}}</a>
+
+
+            </div>
+
+            <button class="button is-primary has-test-white" routerLink="/new-list">+ New List</button>
+        </div>
+        <div class="shopping-list-container">
+            <h1 class="title has-text-primary">
+                Shopping List
+
+            </h1>
+            <div class="list" *ngFor="let tasks of task">
+                <p>{{task.title}}</p>
+            </div>
+
+        </div>
+    </div>
+</div>
